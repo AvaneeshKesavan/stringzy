@@ -19,12 +19,12 @@
 
 ## ✨ Features
 
-- 💪 **Powerful** - Transform, validate, analyze, and format strings with minimal code
-- 🪶 **Lightweight** - Zero dependencies, tiny footprint
-- 🧩 **Modular** - Import only what you need with organized namespaces
-- 🚀 **Fast** - Optimized for performance
-- ✅ **Tested** - Reliable and robust
-- 🎯 **Comprehensive** - 4 specialized modules for all string needs
+- **Powerful** - Transform, validate, analyze, and format strings with minimal code
+- **Lightweight** - Zero dependencies, tiny footprint
+- **Modular** - Import only what you need with organized namespaces
+- **Fast** - Optimized for performance
+- **Tested** - Reliable and robust
+- **Comprehensive** - 4 specialized modules for all string needs
 
 ## 📦 Installation
 
@@ -128,7 +128,7 @@ These changes improve throughput and reduce memory pressure when working with la
 - [vowelConsonantCount](#vowelconsonantcount) - Counts the number of vowels and consonants in a given string
 - [checkMultiplePatterns](#checkmultiplepatterns) - Finds occurrences of multiple patterns within a given text using Rabin–Karp algorithm (case sensitive)
 - [checkSubsequence](#checksubsequence) - Checks whether the second string is a subsequence of the first string (case sensitive)
-- [stringRotation](#stringrotation) -  Checks if one string is a rotation of another (case sensitive).
+- [stringRotation](#stringrotation) - Checks if one string is a rotation of another (case sensitive).
 - [lexicographicalRank](#lexicographicalrank) - Calculates the lexicographical rank of a string among all its unique permutations.
 
 ### Formatting
@@ -141,7 +141,7 @@ These changes improve throughput and reduce memory pressure when working with la
 - [formatRomanNumeral](#formatromannumeral) - Converts a positive integer into its Roman numeral representation.
 - [formatPercentage](#formatpercentage) - Converts a number into a percentage string with configurable decimal precision.
 - [formatFileSize](#formatfilesize) - Converts a number of bytes into a human-readable file size string (B, KB, MB, GB, TB).
-- [formatOrdinal](#formatordinal) -  Converts a number into its ordinal string representation (e.g., 1 → "1st", 2 → "2nd").
+- [formatOrdinal](#formatordinal) - Converts a number into its ordinal string representation (e.g., 1 → "1st", 2 → "2nd").
 - [formatList](#formatlist) - Formats an array of strings into a human-readable list with proper commas and "and".
 - [formatCreditCard](#formatcreditcard) - Formats a credit card number by grouping digits into readable parts.
 - [formatToOctal](#formattotoctal) - Converts a decimal number to octal, optional "0o" prefix.
@@ -518,8 +518,10 @@ numberToText(12345, 'pl'); // Returns: 'dwanaście tysięcy trzysta czterdzieśc
 Available languages: en (English), pl (Polish).
 
 #### <a id="reversewordsinstring"></a>`reverseWordsInString(str)`
-Reverses the order of words in a string and reverses the position of surrounding whitespace (leading becomes trailing and vice-versa). 
+
+Reverses the order of words in a string and reverses the position of surrounding whitespace (leading becomes trailing and vice-versa).
 Reverses the order of words in a string while preserving the exact original spacing between each word.
+
 ```javascript
 import { reverseWordsInString } from 'stringzy';
 
@@ -533,6 +535,7 @@ reverseWordsInString('  leading  spaces   and trailing  ');
 reverseWordsInString('single-word');
 // Returns: 'single-word'
 ```
+
 | Parameter | Type   | Default  | Description                 |
 | --------- | ------ | -------- | --------------------------- |
 | str       | string | required | The input string to reverse |
@@ -580,9 +583,9 @@ for (const p of stringPermutationsGenerator('abcd')) {
 const perms = Array.from(stringPermutationsGenerator('abcd'));
 ```
 
-| Parameter | Type   | Default  | Description                                            |
-| --------- | ------ | -------- | ------------------------------------------------------ |
-| input     | string | required | The input string to generate permutations from.        |
+| Parameter | Type   | Default  | Description                                     |
+| --------- | ------ | -------- | ----------------------------------------------- |
+| input     | string | required | The input string to generate permutations from. |
 
 #### <a id="stringcombinations"></a>`stringCombinations(str)`
 
@@ -613,7 +616,6 @@ stringCombinations('!@');
 | Parameter | Type   | Default  | Description                                            |
 | --------- | ------ | -------- | ------------------------------------------------------ |
 | str       | string | required | The input string to generate unique combinations from. |
-
 
 ### ✅ Validations
 
@@ -815,14 +817,14 @@ Ignores digits, special characters, white spaces.
 ```javascript
 import { isLowerCase } from 'stringzy';
 
-isLowerCase('hello');      // true
-isLowerCase('hello123!');  // true
-isLowerCase('Hello');      // false
-isLowerCase('12345');      // false
+isLowerCase('hello'); // true
+isLowerCase('hello123!'); // true
+isLowerCase('Hello'); // false
+isLowerCase('12345'); // false
 ```
 
-| Parameter | Type   | Default  | Description                                                                  |
-| --------- | ------ | -------- | ---------------------------------------------------------------------------- |
+| Parameter | Type   | Default  | Description                                                             |
+| --------- | ------ | -------- | ----------------------------------------------------------------------- |
 | str       | string | required | The input string to validate as containing lowercase alphabetic letters |
 
 #### <a id="isuppercase"></a>`isUpperCase(str)`
@@ -833,14 +835,14 @@ Ignores digits, special characters, white spaces.
 ```javascript
 import { isUpperCase } from 'stringzy';
 
-isUpperCase('HELLO');      // true
-isUpperCase('HELLO123!');  // true
-isUpperCase('Hello');      // false
-isUpperCase('12345');      // false
+isUpperCase('HELLO'); // true
+isUpperCase('HELLO123!'); // true
+isUpperCase('Hello'); // false
+isUpperCase('12345'); // false
 ```
 
-| Parameter | Type   | Default  | Description                                                                  |
-| --------- | ------ | -------- | ---------------------------------------------------------------------------- |
+| Parameter | Type   | Default  | Description                                                             |
+| --------- | ------ | -------- | ----------------------------------------------------------------------- |
 | str       | string | required | The input string to validate as containing uppercase alphabetic letters |
 
 #### <a id="isalphabetic"></a>`isAlphabetic(text)`
@@ -886,20 +888,21 @@ isAlphaNumeric(''); // false
 
 #### <a id="isanagram"></a>`isAnagram(str1, str2)`
 
-Checks whether two strings are anagrams of each other (contain the same characters in the same frequency, regardless of order).  
-- Comparison is case-insensitive.  
-- Spaces and punctuation are ignored.  
-- Throws an error if either input is not a string.  
+Checks whether two strings are anagrams of each other (contain the same characters in the same frequency, regardless of order).
+
+- Comparison is case-insensitive.
+- Spaces and punctuation are ignored.
+- Throws an error if either input is not a string.
 
 ```javascript
 import { isAnagram } from 'stringzy';
 
-isAnagram('listen', 'silent');       // true
+isAnagram('listen', 'silent'); // true
 isAnagram('Debit Card', 'Bad Credit'); // true
 isAnagram('Astronomer', 'Moon starer'); // true
-isAnagram('hello', 'world');         // false
-isAnagram('a', 'b');                 // false
-isAnagram('', '');                   // true
+isAnagram('hello', 'world'); // false
+isAnagram('a', 'b'); // false
+isAnagram('', ''); // true
 ```
 
 | Parameter | Type   | Default  | Description                              |
@@ -910,6 +913,7 @@ isAnagram('', '');                   // true
 #### <a id="ismacaddress"></a>`isMacAddress(str)`
 
 Checks whether a given string is a valid **MAC address**.
+
 - A valid MAC address consists of six pairs of hexadecimal digits (`0–9`, `A–F`, case-insensitive).
 - Returns `true` if the string is a valid MAC address, otherwise `false`.
 - Throws an error if input is not a string.
@@ -917,16 +921,16 @@ Checks whether a given string is a valid **MAC address**.
 ```javascript
 import { isMacAddress } from 'stringzy';
 
-isMacAddress("00:1A:2B:3C:4D:5E");   // true
-isMacAddress("00-1A-2B-3C-4D-5E");   // true
-isMacAddress("aa:bb:cc:dd:ee:ff");   // true
-isMacAddress("FF-FF-FF-FF-FF-FF");   // true
+isMacAddress('00:1A:2B:3C:4D:5E'); // true
+isMacAddress('00-1A-2B-3C-4D-5E'); // true
+isMacAddress('aa:bb:cc:dd:ee:ff'); // true
+isMacAddress('FF-FF-FF-FF-FF-FF'); // true
 
-isMacAddress("00:1G:2B:3C:4D:5E");   // false (invalid hex digit)
-isMacAddress("00:1A-2B:3C:4D:5E");   // false (mixed separators)
-isMacAddress("001A:2B:3C:4D:5E");    // false (wrong group length)
-isMacAddress("hello-world-mac");     // false (invalid format)
-isMacAddress("");                    // false (empty string)
+isMacAddress('00:1G:2B:3C:4D:5E'); // false (invalid hex digit)
+isMacAddress('00:1A-2B:3C:4D:5E'); // false (mixed separators)
+isMacAddress('001A:2B:3C:4D:5E'); // false (wrong group length)
+isMacAddress('hello-world-mac'); // false (invalid format)
+isMacAddress(''); // false (empty string)
 ```
 
 | Parameter | Type   | Default  | Description                             |
@@ -942,18 +946,19 @@ isMacAddress("");                    // false (empty string)
 ```javascript
 import { isPangram } from 'stringzy';
 
-isPangram("The quick brown fox jumps over the lazy dog."); // true
-isPangram("This is not a pangram."); // false
-isPangram("Abcdefghijklmnopqrstuvwxyz"); // true
-isPangram("AbCdEfGhIjKlMnOpQrStUvWxYz"); // true
-isPangram("A-B-C-D-E-F-G-H-I-J-K-L-M-N-O-P-Q-R-S-T-U-V-W-X-Y-Z"); // true
-isPangram(""); // false
-isPangram("Hello world"); // false
+isPangram('The quick brown fox jumps over the lazy dog.'); // true
+isPangram('This is not a pangram.'); // false
+isPangram('Abcdefghijklmnopqrstuvwxyz'); // true
+isPangram('AbCdEfGhIjKlMnOpQrStUvWxYz'); // true
+isPangram('A-B-C-D-E-F-G-H-I-J-K-L-M-N-O-P-Q-R-S-T-U-V-W-X-Y-Z'); // true
+isPangram(''); // false
+isPangram('Hello world'); // false
 ```
 
 | Parameter | Type   | Default  | Description                                           |
 | --------- | ------ | -------- | ----------------------------------------------------- |
 | str       | string | required | The input string to check for pangram characteristics |
+
 ---
 
 ### 📊 Analysis
@@ -1077,48 +1082,45 @@ feature/content-words
 Counts the number of content words (nouns, verbs, adjectives, adverbs, etc.) in a string.
 
 ```javascript
-
 import { contentWordCount } from 'stringzy';
 
-contentWordCount("Learning JavaScript improves coding skills!");
+contentWordCount('Learning JavaScript improves coding skills!');
 // Returns: { count: 5 }
 
-contentWordCount("The cat sleeps on the warm windowsill.");
+contentWordCount('The cat sleeps on the warm windowsill.');
 // Returns: { count: 5 }
 
-contentWordCount("Wow! Such a beautiful day.");
+contentWordCount('Wow! Such a beautiful day.');
 // Returns: { count: 4 }
 ```
 
-| Parameter | Type   | Default  | Description                            |
-| --------- | ------ | -------- | -------------------------------------- |
+| Parameter | Type   | Default  | Description                               |
+| --------- | ------ | -------- | ----------------------------------------- |
 | text      | string | required | The input string to analyze content words |
 
 **Returns:** An object containing:
 
 - `count` (number): Total number of content words in the string
 
-
 #### <a id="functionwordcount"></a>`functionWordCount(text)`
 
 Counts the number of function words (prepositions, pronouns, conjunctions, articles, etc.) in a string.
 
 ```javascript
-
 import { functionWordCount } from 'stringzy';
 
-functionWordCount("She and I are going to the park.");
+functionWordCount('She and I are going to the park.');
 // Returns: { count: 7 }
 
-functionWordCount("It is an example of proper grammar usage.");
+functionWordCount('It is an example of proper grammar usage.');
 // Returns: { count: 8 }
 
-functionWordCount("Can you see the stars tonight?");
+functionWordCount('Can you see the stars tonight?');
 // Returns: { count: 5 }
 ```
 
-| Parameter | Type   | Default  | Description                            |
-| --------- | ------ | -------- | -------------------------------------- |
+| Parameter | Type   | Default  | Description                                |
+| --------- | ------ | -------- | ------------------------------------------ |
 | text      | string | required | The input string to analyze function words |
 
 **Returns:** An object containing:
@@ -1182,9 +1184,10 @@ checkMultiplePatterns('aaaa', ['aa', 'aaa']);
 checkMultiplePatterns('hello world', ['xyz', '123']);
 // { xyz: [], 123: [] }
 ```
-| Parameter | Type      | Default  | Description                                                 |
-| --------- | --------- | -------- | ----------------------------------------------------------- |
-| text      | string    | required | The text to search within.                                  |
+
+| Parameter | Type       | Default  | Description                                                 |
+| --------- | ---------- | -------- | ----------------------------------------------------------- |
+| text      | string     | required | The text to search within.                                  |
 | patterns  | string\[ ] | required | An array of patterns to search for (each must be a string). |
 
 #### <a id="checksubsequence"></a>`checkSubsequence(str, sub)`
@@ -1213,12 +1216,14 @@ isSubsequence('AbC', 'AC');
 isSubsequence('a b c', 'abc');
 // false → spaces count as characters
 ```
+
 | Parameter | Type   | Default  | Description                                     |
 | --------- | ------ | -------- | ----------------------------------------------- |
 | str       | string | required | The main string to check within.                |
 | sub       | string | required | The subsequence string to verify against `str`. |
 
 #### <a id="stringrotation"></a>`checkStringRotations(str1, str2)`
+
 Checks whether a given string `str2` is a rotation of another string `str1`.
 Case-sensitive comparison is performed. Both strings must be of equal length to be considered rotations.
 Spaces and all characters are treated literally.
@@ -1258,22 +1263,22 @@ The rank is **1-based** (first permutation has rank 1).
 Handles duplicate characters by correctly adjusting ranks.
 
 ```javascript
-lexicographicRank("acb");
+lexicographicRank('acb');
 // 2 → permutations: ["abc", "acb", "bac", "bca", "cab", "cba"]
 
-lexicographicRank("string");
+lexicographicRank('string');
 // 598
 
-lexicographicRank("cba");
+lexicographicRank('cba');
 // 6 → permutations: ["abc", "acb", "bac", "bca", "cab", "cba"]
 
-lexicographicRank("aba");
+lexicographicRank('aba');
 // 2 → permutations: ["aab", "aba", "baa"]
 
-lexicographicRank("a");
+lexicographicRank('a');
 // 1
 
-lexicographicRank("");
+lexicographicRank('');
 // 1 → edge case, empty string considered rank 1
 ```
 
@@ -1333,21 +1338,21 @@ formatPhone('11234567890', 'international'); // '+1 (123) 456-7890'
 Converts a duration in seconds or milliseconds into a human-readable string.
 
 ```javascript
-formatDuration(60);        // "1m"
-formatDuration(61);        // "1m 1s"
-formatDuration(3661);      // "1h 1m 1s"
-formatDuration(7325);      // "2h 2m 5s"
+formatDuration(60); // "1m"
+formatDuration(61); // "1m 1s"
+formatDuration(3661); // "1h 1m 1s"
+formatDuration(7325); // "2h 2m 5s"
 formatDuration(1234567, { unit: 'milliseconds', includeMs: true }); // "20m 34s 567ms"
 ```
 
-| Parameter | Type   | Default     | Description                                           |
-| --------- | ------ | ----------- | ----------------------------------------------------- |
-| input     | number | required    | The duration in seconds or milliseconds               |
-| options   | object | `{}`        | Optional configuration object                         |
-| - unit    | string | 'seconds'   | Input unit: 'seconds' or 'milliseconds'              |
-| - format  | string | 'short'     | Output format: 'short', 'medium', or 'long'          |
-| - includeMs | boolean | false    | Whether to include milliseconds in output             |
-| - delimiter | string | ' '       | The delimiter between time units                      |
+| Parameter   | Type    | Default   | Description                                 |
+| ----------- | ------- | --------- | ------------------------------------------- |
+| input       | number  | required  | The duration in seconds or milliseconds     |
+| options     | object  | `{}`      | Optional configuration object               |
+| - unit      | string  | 'seconds' | Input unit: 'seconds' or 'milliseconds'     |
+| - format    | string  | 'short'   | Output format: 'short', 'medium', or 'long' |
+| - includeMs | boolean | false     | Whether to include milliseconds in output   |
+| - delimiter | string  | ' '       | The delimiter between time units            |
 
 #### <a id="trim"></a>`trim(str)`
 
@@ -1357,33 +1362,37 @@ Removes unnecessary whitespace from a string, including leading/trailing spaces,
 trim('  hello   world  '); // 'hello world'
 trim('line \n breaks\tand tabs'); // 'line breaks and tabs'
 ```
-| Parameter | Type   | Default  | Description                          |
-| --------- | ------ | -------- | ------------------------------------ |
-| str       | string | required | The input string to trim and normalize.|
+
+| Parameter | Type   | Default  | Description                             |
+| --------- | ------ | -------- | --------------------------------------- |
+| str       | string | required | The input string to trim and normalize. |
 
 #### <a id="formatromannumeral"></a>formatRomanNumeral(num)
+
 Converts a positive integer into its Roman numeral representation (supports values from 1 to 3999).
 Throws an error for invalid, non-numeric, zero, or negative inputs.
 
 ```javascript
 import { formatRomanNumeral } from 'stringzy';
 
-formatRomanNumeral(1);     // "I"
-formatRomanNumeral(4);     // "IV"
-formatRomanNumeral(9);     // "IX"
-formatRomanNumeral(58);    // "LVIII"
-formatRomanNumeral(1994);  // "MCMXCIV"
+formatRomanNumeral(1); // "I"
+formatRomanNumeral(4); // "IV"
+formatRomanNumeral(9); // "IX"
+formatRomanNumeral(58); // "LVIII"
+formatRomanNumeral(1994); // "MCMXCIV"
 
 // Invalid cases
-formatRomanNumeral(0);     // RangeError
-formatRomanNumeral(-5);    // RangeError
+formatRomanNumeral(0); // RangeError
+formatRomanNumeral(-5); // RangeError
 formatRomanNumeral('123'); // TypeError
 ```
+
 | Parameter | Type   | Default  | Description                                          |
 | --------- | ------ | -------- | ---------------------------------------------------- |
 | num       | number | required | The integer (1–3999) to convert into Roman numerals. |
 
 #### <a id="formatpercentage"></a>formatPercentage(num, precision)
+
 Converts a number into a percentage string with configurable decimal precision. </br>
 Supports positive, negative, and whole numbers. </br>
 Throws an error for invalid or non-numeric inputs.
@@ -1391,17 +1400,17 @@ Throws an error for invalid or non-numeric inputs.
 ```javascript
 import { formatPercentage } from 'stringzy';
 
-formatPercentage(0.567);       // "56.70%"
-formatPercentage(0.567, 1);    // "56.7%"
-formatPercentage(0.5, 0);      // "50%"
-formatPercentage(1);           // "100%"
-formatPercentage(-0.25);       // "-25%"
-formatPercentage(50);          // "5000%"
+formatPercentage(0.567); // "56.70%"
+formatPercentage(0.567, 1); // "56.7%"
+formatPercentage(0.5, 0); // "50%"
+formatPercentage(1); // "100%"
+formatPercentage(-0.25); // "-25%"
+formatPercentage(50); // "5000%"
 
 // Invalid cases
-formatPercentage('0.5');       // TypeError
-formatPercentage(null);        // TypeError
-formatPercentage(0.5, -1);     // TypeError
+formatPercentage('0.5'); // TypeError
+formatPercentage(null); // TypeError
+formatPercentage(0.5, -1); // TypeError
 ```
 
 | Parameter | Type   | Default  | Description                                            |
@@ -1410,6 +1419,7 @@ formatPercentage(0.5, -1);     // TypeError
 | precision | number | 2        | The number of decimal places to include in the output. |
 
 #### <a id="formatfilesize"></a>formatFileSize(bytes, precision)
+
 Converts a number of bytes into a human-readable file size string (B, KB, MB, GB, TB). </br>
 Automatically scales the unit based on the size and supports configurable decimal precision.</br>
 Throws an error for invalid, non-numeric, or negative inputs.</br>
@@ -1417,17 +1427,17 @@ Throws an error for invalid, non-numeric, or negative inputs.</br>
 ```javascript
 import { formatFileSize } from 'stringzy';
 
-formatFileSize(123);          // "123 B"
-formatFileSize(1024);         // "1 KB"
-formatFileSize(1048576);      // "1 MB"
-formatFileSize(1073741824);   // "1 GB"
-formatFileSize(1572864);      // "1.5 MB"
-formatFileSize(1500, 3);      // "1.465 KB"
+formatFileSize(123); // "123 B"
+formatFileSize(1024); // "1 KB"
+formatFileSize(1048576); // "1 MB"
+formatFileSize(1073741824); // "1 GB"
+formatFileSize(1572864); // "1.5 MB"
+formatFileSize(1500, 3); // "1.465 KB"
 
 // Invalid cases
-formatFileSize(-1024);        // RangeError
-formatFileSize('1024');       // TypeError
-formatFileSize(1024, -1);     // TypeError
+formatFileSize(-1024); // RangeError
+formatFileSize('1024'); // TypeError
+formatFileSize(1024, -1); // TypeError
 ```
 
 | Parameter | Type   | Default  | Description                                                     |
@@ -1436,6 +1446,7 @@ formatFileSize(1024, -1);     // TypeError
 | precision | number | 2        | The number of decimal places for fractional sizes.              |
 
 #### <a id="formatordinal"></a>formatOrdinal(num)
+
 Converts a number into its ordinal string representation (e.g., 1 → "1st", 2 → "2nd"). </br>
 Handles special cases for numbers ending in 11, 12, and 13.</br>
 Throws a TypeError if the input is not a number.</br>
@@ -1443,21 +1454,21 @@ Throws a TypeError if the input is not a number.</br>
 ```javascript
 import { formatOrdinal } from 'stringzy';
 
-formatOrdinal(1);     // "1st"
-formatOrdinal(2);     // "2nd"
-formatOrdinal(3);     // "3rd"
-formatOrdinal(4);     // "4th"
-formatOrdinal(11);    // "11th"
-formatOrdinal(12);    // "12th"
-formatOrdinal(13);    // "13th"
-formatOrdinal(21);    // "21st"
-formatOrdinal(22);    // "22nd"
-formatOrdinal(23);    // "23rd"
-formatOrdinal(24);    // "24th"
+formatOrdinal(1); // "1st"
+formatOrdinal(2); // "2nd"
+formatOrdinal(3); // "3rd"
+formatOrdinal(4); // "4th"
+formatOrdinal(11); // "11th"
+formatOrdinal(12); // "12th"
+formatOrdinal(13); // "13th"
+formatOrdinal(21); // "21st"
+formatOrdinal(22); // "22nd"
+formatOrdinal(23); // "23rd"
+formatOrdinal(24); // "24th"
 
 // Invalid cases
-formatOrdinal('21');  // TypeError
-formatOrdinal(null);  // TypeError
+formatOrdinal('21'); // TypeError
+formatOrdinal(null); // TypeError
 ```
 
 | Parameter | Type   | Default  | Description                         |
@@ -1473,14 +1484,14 @@ Returns an empty string for empty arrays and throws a TypeError for invalid inpu
 ```javascript
 import { formatList } from 'stringzy';
 
-formatList(['apples', 'bananas', 'cherries']);  // "apples, bananas, and cherries"
-formatList(['apples', 'bananas']);              // "apples and bananas"
-formatList(['apple']);                          // "apple"
-formatList([]);                                 // ""
+formatList(['apples', 'bananas', 'cherries']); // "apples, bananas, and cherries"
+formatList(['apples', 'bananas']); // "apples and bananas"
+formatList(['apple']); // "apple"
+formatList([]); // ""
 
 // Invalid cases
-formatList('apple');                            // TypeError
-formatList(['apple', 123]);                     // TypeError
+formatList('apple'); // TypeError
+formatList(['apple', 123]); // TypeError
 ```
 
 | Parameter | Type     | Default  | Description                               |
@@ -1488,6 +1499,7 @@ formatList(['apple', 123]);                     // TypeError
 | arr       | string[] | required | The array of strings to format as a list. |
 
 #### <a id="formatcreditcard"></a>formatCreditCard(cardNumber)
+
 Formats a credit card number into readable groups of digits separated by spaces.
 Supports 15-digit (AmEx) and 16-digit (Visa/MasterCard) numbers.
 Non-digit characters are automatically stripped before formatting.
@@ -1498,14 +1510,14 @@ import { formatCreditCard } from 'stringzy';
 
 formatCreditCard('1234567812345678'); // "1234 5678 1234 5678"
 formatCreditCard('4111111111111111'); // "4111 1111 1111 1111"
-formatCreditCard('378282246310005');  // "3782 822463 10005" (AmEx)
+formatCreditCard('378282246310005'); // "3782 822463 10005" (AmEx)
 formatCreditCard('4111-1111-1111-1111'); // "4111 1111 1111 1111"
 formatCreditCard('123'); // "" (invalid length)
-formatCreditCard('');    // "" (empty string)
+formatCreditCard(''); // "" (empty string)
 ```
 
-| Parameter  | Type   | Default  | Description                                                         |
-| ---------- | ------ | -------- | ------------------------------------------------------------------- |
+| Parameter  | Type   | Default  | Description                                                            |
+| ---------- | ------ | -------- | ---------------------------------------------------------------------- |
 | cardNumber | string | required | The credit card number to format. Cannot include non-digit characters. |
 
 #### <a id="formattotoctal"></a>formatToOctal(num, options?)
@@ -1515,11 +1527,11 @@ Converts a decimal number to its octal (base-8) string representation. Supports 
 ```javascript
 import { formatToOctal } from 'stringzy';
 
-formatToOctal(8);                      // "10"
-formatToOctal(10);                     // "12"
-formatToOctal(255);                    // "377"
-formatToOctal(0);                      // "0"
-formatToOctal(255, { prefix: true });  // "0o377"
+formatToOctal(8); // "10"
+formatToOctal(10); // "12"
+formatToOctal(255); // "377"
+formatToOctal(0); // "0"
+formatToOctal(255, { prefix: true }); // "0o377"
 formatToOctal(-255, { prefix: true }); // "-0o377"
 
 // Invalid cases
@@ -1527,35 +1539,38 @@ formatToOctal(-255, { prefix: true }); // "-0o377"
 // formatToOctal(NaN);   // TypeError
 ```
 
-| Parameter | Type    | Default | Description                                   |
-| --------- | ------- | ------- | --------------------------------------------- |
-| num       | number  | required| The decimal number to convert                 |
-| options   | object  | {}      | Optional settings                             |
-| - prefix  | boolean | false   | If true, prepend the result with `0o`         |
+| Parameter | Type    | Default  | Description                           |
+| --------- | ------- | -------- | ------------------------------------- |
+| num       | number  | required | The decimal number to convert         |
+| options   | object  | {}       | Optional settings                     |
+| - prefix  | boolean | false    | If true, prepend the result with `0o` |
+
 #### <a id="formattemperature"></a>`formatTemperature(value, options)`
 
 Converts a temperature value between Celsius (C), Fahrenheit (F), and Kelvin (K), with configurable decimal precision.
 
 ```javascript
-formatTemperature(0,   { from: 'C', to: 'F' });               // "32.00°F"
-formatTemperature(32,  { from: 'F', to: 'C', precision: 1 }); // "0.0°C"
-formatTemperature(25,  { from: 'C', to: 'K' });               // "298.15K"
-formatTemperature(300, { from: 'K', to: 'F' });               // "80.33°F"
+formatTemperature(0, { from: 'C', to: 'F' }); // "32.00°F"
+formatTemperature(32, { from: 'F', to: 'C', precision: 1 }); // "0.0°C"
+formatTemperature(25, { from: 'C', to: 'K' }); // "298.15K"
+formatTemperature(300, { from: 'K', to: 'F' }); // "80.33°F"
 ```
 
-| Parameter       | Type   | Default | Description                                      |
-| -------------- | ------ | ------- | ------------------------------------------------ |
-| value          | number | required| Temperature to convert                           |
-| options        | object | required| Conversion settings                              |
-| - from         | string | required| Source unit: 'C' | 'F' | 'K'                     |
-| - to           | string | required| Target unit: 'C' | 'F' | 'K'                     |
-| - precision    | number | 2       | Number of decimal places in the output           |
+| Parameter   | Type   | Default  | Description                            |
+| ----------- | ------ | -------- | -------------------------------------- | --- | --- |
+| value       | number | required | Temperature to convert                 |
+| options     | object | required | Conversion settings                    |
+| - from      | string | required | Source unit: 'C'                       | 'F' | 'K' |
+| - to        | string | required | Target unit: 'C'                       | 'F' | 'K' |
+| - precision | number | 2        | Number of decimal places in the output |
 
 Notes:
+
 - Kelvin values are rendered without the degree symbol (e.g., "298.15K").
 - An error is thrown for invalid conversions or non-numeric input values.
 
 #### <a id="formatscientific"></a>formatScientific(num, options)
+
 Converts a number into scientific notation (e.g., 12345 → "1.23e+4").</br>
 Supports custom precision and uppercase "E" formatting.</br>
 Handles negative numbers correctly.</br>
@@ -1564,9 +1579,9 @@ Throws TypeError if input is not a valid number.</br>
 ```javascript
 import { formatScientific } from 'stringzy';
 
-formatScientific(12345);                  // "1.23e+4"
-formatScientific(0.000123);               // "1.23e-4"
-formatScientific(-98765);                 // "-9.88e+4"
+formatScientific(12345); // "1.23e+4"
+formatScientific(0.000123); // "1.23e-4"
+formatScientific(-98765); // "-9.88e+4"
 
 formatScientific(1000000, { precision: 4 }); // "1.0000e+6"
 formatScientific(98765, { uppercase: true }); // "9.88E+4"
@@ -1574,8 +1589,9 @@ formatScientific(12345, { precision: 5, uppercase: true }); // "1.23450E+4"
 
 // Invalid cases
 formatScientific('12345'); // TypeError
-formatScientific(null);    // TypeError
+formatScientific(null); // TypeError
 ```
+
 | Parameter         | Type    | Default  | Description                                   |
 | ----------------- | ------- | -------- | --------------------------------------------- |
 | num               | number  | required | The number to convert to scientific notation. |
@@ -1591,29 +1607,31 @@ Converts a decimal integer to its binary (base-2) string representation with opt
 import { formatToBinary } from 'stringzy';
 
 // Basic conversions
-formatToBinary(5);      // "101"
-formatToBinary(10);     // "1010"
-formatToBinary(255);    // "11111111"
-formatToBinary(0);      // "0"
-formatToBinary(-5);     // "-101"
+formatToBinary(5); // "101"
+formatToBinary(10); // "1010"
+formatToBinary(255); // "11111111"
+formatToBinary(0); // "0"
+formatToBinary(-5); // "-101"
 
 // Grouping from right to left (no left-padding)
 formatToBinary(255, { group: 4 }); // "1111 1111"
-formatToBinary(10,  { group: 2 }); // "10 10"
+formatToBinary(10, { group: 2 }); // "10 10"
 formatToBinary(-255, { group: 4 }); // "-1111 1111"
 
 // Invalid cases
-formatToBinary(3.14);            // TypeError (must be an integer)
-formatToBinary('5');              // TypeError (input must be a number)
+formatToBinary(3.14); // TypeError (must be an integer)
+formatToBinary('5'); // TypeError (input must be a number)
 formatToBinary(10, { group: 0 }); // TypeError (group must be positive integer)
 ```
 
-| Parameter | Type   | Default | Description                                      |
-| --------- | ------ | ------- | ------------------------------------------------ |
-| num       | number | required| The decimal integer to convert to binary.       |
-| options   | object | `{}`    | Optional configuration.                         |
-| - group   | number | —       | Positive integer; bits per group (right-to-left) |
+| Parameter | Type   | Default  | Description                                      |
+| --------- | ------ | -------- | ------------------------------------------------ |
+| num       | number | required | The decimal integer to convert to binary.        |
+| options   | object | `{}`     | Optional configuration.                          |
+| - group   | number | —        | Positive integer; bits per group (right-to-left) |
+
 #### <a id="formattohexadecimal"></a>formatToHexadecimal(num, options)
+
 Converts a decimal number into its hexadecimal (base-16) string representation.</br>
 Supports optional prefix "0x" and lowercase formatting.</br>
 Handles negative numbers by adding a - sign before the output.</br>
@@ -1622,13 +1640,13 @@ Throws a TypeError if the input is not a valid number.</br>
 ```javascript
 import { formatToHexadecimal } from 'stringzy';
 
-formatToHexadecimal(10);          // "A"
-formatToHexadecimal(15);          // "F"
-formatToHexadecimal(255);         // "FF"
-formatToHexadecimal(4095);        // "FFF"
+formatToHexadecimal(10); // "A"
+formatToHexadecimal(15); // "F"
+formatToHexadecimal(255); // "FF"
+formatToHexadecimal(4095); // "FFF"
 
 // Negative numbers
-formatToHexadecimal(-255);        // "-FF"
+formatToHexadecimal(-255); // "-FF"
 
 // With prefix
 formatToHexadecimal(255, { prefix: true }); // "0xFF"
@@ -1641,15 +1659,15 @@ formatToHexadecimal(255, { lowercase: true }); // "ff"
 formatToHexadecimal(255, { prefix: true, lowercase: true }); // "0xff"
 
 // Invalid cases
-formatToHexadecimal('255');      // TypeError
-formatToHexadecimal(null);       // TypeError
-formatToHexadecimal(NaN);        // TypeError
+formatToHexadecimal('255'); // TypeError
+formatToHexadecimal(null); // TypeError
+formatToHexadecimal(NaN); // TypeError
 ```
 
 | Parameter         | Type                | Default  | Description                                               |
 | ----------------- | ------------------- | -------- | --------------------------------------------------------- |
 | num               | number              | required | The decimal number to convert to hexadecimal.             |
-| options           | object *(optional)* | `{}`     | Formatting options.                                       |
+| options           | object _(optional)_ | `{}`     | Formatting options.                                       |
 | options.prefix    | boolean             | `false`  | Adds `"0x"` before the result (or `"-0x"` for negatives). |
 | options.lowercase | boolean             | `false`  | Outputs letters in lowercase (`"ff"` instead of `"FF"`).  |
 
@@ -1661,20 +1679,20 @@ Converts a binary, octal, or hexadecimal string into its decimal (base‑10) num
 import { formatToDecimal } from 'stringzy';
 
 // Binary (base 2)
-formatToDecimal('1010', { base: 2 });   // 10
-formatToDecimal('0b111', { base: 2 });  // 7
+formatToDecimal('1010', { base: 2 }); // 10
+formatToDecimal('0b111', { base: 2 }); // 7
 
 // Octal (base 8)
-formatToDecimal('12', { base: 8 });     // 10
-formatToDecimal('0o377', { base: 8 });  // 255
+formatToDecimal('12', { base: 8 }); // 10
+formatToDecimal('0o377', { base: 8 }); // 255
 
 // Hexadecimal (base 16)
-formatToDecimal('FF', { base: 16 });    // 255
-formatToDecimal('0x10', { base: 16 });  // 16
+formatToDecimal('FF', { base: 16 }); // 255
+formatToDecimal('0x10', { base: 16 }); // 16
 
 // Trimming and sign handling
 formatToDecimal('  +0xFF  ', { base: 16 }); // 255
-formatToDecimal('-0b10', { base: 2 });      // -2
+formatToDecimal('-0b10', { base: 2 }); // -2
 
 // Invalid cases (throw TypeError)
 // formatToDecimal('102', { base: 2 });
@@ -1683,11 +1701,11 @@ formatToDecimal('-0b10', { base: 2 });      // -2
 // formatToDecimal('10', { base: 10 });
 ```
 
-| Parameter | Type          | Default  | Description                                        |
-| --------- | ------------- | -------- | -------------------------------------------------- |
-| value     | string        | required | The numeric string to convert (may include prefix) |
-| options   | object        | required | Configuration for conversion                        |
-| - base    | 2 \| 8 \| 16 | required | The base of the input string                        |
+| Parameter | Type         | Default  | Description                                        |
+| --------- | ------------ | -------- | -------------------------------------------------- |
+| value     | string       | required | The numeric string to convert (may include prefix) |
+| options   | object       | required | Configuration for conversion                       |
+| - base    | 2 \| 8 \| 16 | required | The base of the input string                       |
 
 ## 🔧 Usage Patterns
 
